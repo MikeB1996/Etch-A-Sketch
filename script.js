@@ -11,8 +11,6 @@ let color="black";
 //boolean variable that shows if rainbow is active or not
 let isRainbow=false;
 
-
-
 //reset button event listener that class the reset function
 ResetBut.addEventListener('click',function (){
     resetGrid();
@@ -53,19 +51,13 @@ let rainbowButton=document.getElementById("colorBRainbow");
 
 //rainbow button click event listener
 rainbowButton.addEventListener('click',function(){
-    //color=generateRandomColor();
+    
     color=generateRandomColor();
     isRainbow=true;
-    /*if(isRainbow=="true"){ 
-            divCells.forEach((cell) => cell.addEventListener("mouseenter", function(e){
-            color=generateRandomColor();
-        }));
-
-    }*/
+    
 });
 
-
-        
+       
 //used for the rainbow button it generates a random color with hex notation
 function generateRandomColor(){
     let letters = '0123456789ABCDEF';
@@ -76,9 +68,7 @@ function generateRandomColor(){
             }
     } else {
         col=color;
-    }
-    
-    
+    }   
     return col;
 }
 
@@ -115,11 +105,8 @@ function reCreateGrid(dimension){
         for (j=0;j<dimension;j++){
             const addDiv1=createDivVer(j,dimension);
             addDiv.appendChild(addDiv1);
-            //if(isRainbow==true){
-                addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=generateRandomColor());
-            /*} else {
-                addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=color);
-            }*/
+            addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=generateRandomColor());
+           
         }
     }
     
@@ -137,13 +124,7 @@ function createGrid(){
         for (j=0;j<dim;j++){
             const addDiv1=createDivVer(j,dim);
             addDiv.appendChild(addDiv1);
-            //if(isRainbow==true){
                 addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=generateRandomColor());
-            /*} else {
-                addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=color);
-            }*/
-            
-            
         }  
     
 
@@ -161,14 +142,10 @@ function mouseOverDiv(){
 function createDivVer(num,dim){
     const addDiv= document.createElement("div");
     addDiv.setAttribute("id",`div${num}`);
-    addDiv.style.width=`${600/dim}px`;
-    addDiv.style.height=`${600/dim}px`;
+    addDiv.style.width=`${500/dim}px`;
+    addDiv.style.height=`${500/dim}px`;
     addDiv.style.backgroundColor="white";
-    //addDiv.style.borderColor="red";
-    //addDiv.style.border="solid";
-    addDiv.classList.add("gridDiv");
-    
-    
+    addDiv.classList.add("gridDiv");   
     return addDiv;
 }
 
@@ -176,14 +153,11 @@ function createDivVer(num,dim){
 function createDiv(num,dim){
     const addDiv= document.createElement("div");
     addDiv.setAttribute("id",`divs${num}`);
-    addDiv.style.width=`${600/dim}px`;
-    addDiv.style.height=`${600/dim}px`;
+    addDiv.style.width=`${500/dim}px`;
+    addDiv.style.height=`${500/dim}px`;
     addDiv.style.float="none";
     addDiv.style.display="inline-table";
-    //addDiv.style.border="solid"
-    addDiv.classList.add("gridDiv");
-   
-    
+    addDiv.classList.add("gridDiv");   
     return addDiv;
 }
 

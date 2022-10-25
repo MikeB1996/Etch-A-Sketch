@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: lightblue;
 }
 
 
@@ -13,8 +13,10 @@ body {
 
 .header{
     font-weight: bolder;
-    font-size: 38px;
+    font-size: 36px;
     text-align: center;
+    color: red;
+    margin: 0px;
     
 }
 
@@ -28,27 +30,40 @@ body {
 }
 
 .cont {
-    flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 100px 20px;
+    
 
 }
 .slideContainer {
     padding: 20px;
+    text-align: center;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sizeButtons{
+    display: flex;
+    flex-direction: column;
+}
+
+.colorButtons {
+    display: flex;
+    flex-direction: column;
 }
 
 
-.leftContainer{
-    padding: 20px;
+.rightContainer{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .buttonContainer{
-    padding: 20px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;

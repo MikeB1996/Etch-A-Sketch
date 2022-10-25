@@ -10,11 +10,14 @@
 </head>
 <body>
     <div class="header">
-        Etch-A-Sketch
+        <p>Etch-A-Sketch</p> 
     </div>
 
     <div class="cont">
-        <div class="leftContainer">
+        <div id="gridCont" class="gridContainer">
+    
+        </div>
+        <div class="rightContainer">
             <div class="slideContainer">
                 <input type="range" min="1" max="100" value="32" class="slider" id="myRange">
                 <p class="slideP" id="myPSlide"></p>
@@ -22,7 +25,7 @@
         
         
             <div class="buttonContainer">
-                <div>
+                <div class="sizeButtons">
                     <button id="resetB" class="resetButton">Reset</button>
                     <button id="resizeB" class="resizeButton">Resize</button>
                 </div>
@@ -34,12 +37,6 @@
                     <button id="colorBRainbow" class="colorButton">Rainbow</button>
                 </div>
             </div>
-        </div>
-        
-    
-    
-        <div id="gridCont" class="gridContainer">
-    
         </div>
 
     </div>
