@@ -35,6 +35,14 @@ redButton.addEventListener('click',function(){
     color="red";
     isRainbow=false;
 });
+
+let blackButton=document.getElementById("colorBBlack");
+//red button click event listener
+blackButton.addEventListener('click',function(){
+    color="black";
+    isRainbow=false;
+});
+
 let blueButton=document.getElementById("colorBBlue");
 //blue button click event listener
 blueButton.addEventListener('click',function(){
@@ -62,9 +70,15 @@ rainbowButton.addEventListener('click',function(){
 function generateRandomColor(){
     let letters = '0123456789ABCDEF';
     let col = '#';
-    for (let i = 0; i < 6; i++) {
-    col += letters[Math.floor(Math.random() * 16)];
+    if (isRainbow==true){
+        for (let i = 0; i < 6; i++) {
+            col += letters[Math.floor(Math.random() * 16)];
+            }
+    } else {
+        col=color;
     }
+    
+    
     return col;
 }
 
@@ -101,11 +115,11 @@ function reCreateGrid(dimension){
         for (j=0;j<dimension;j++){
             const addDiv1=createDivVer(j,dimension);
             addDiv.appendChild(addDiv1);
-            if(isRainbow==true){
+            //if(isRainbow==true){
                 addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=generateRandomColor());
-            } else {
+            /*} else {
                 addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=color);
-            }
+            }*/
         }
     }
     
@@ -123,11 +137,11 @@ function createGrid(){
         for (j=0;j<dim;j++){
             const addDiv1=createDivVer(j,dim);
             addDiv.appendChild(addDiv1);
-            if(isRainbow==true){
+            //if(isRainbow==true){
                 addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=generateRandomColor());
-            } else {
+            /*} else {
                 addDiv1.addEventListener('mouseenter', ()=>  addDiv1.style.backgroundColor=color);
-            }
+            }*/
             
             
         }  
