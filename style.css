@@ -1,9 +1,57 @@
 body {
-    
+    background-color: gray;
 }
 
 
 .gridContainer {
     overflow: hidden;
    
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header{
+    font-weight: bolder;
+    font-size: 38px;
+    text-align: center;
+    
+}
+
+.slideP{
+    width: 40px;
+    height: 30px;
+    background-color: white;
+    text-align: center;
+    font-size: 18px;
+   
+}
+
+.cont {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 20px;
+
+}
+.slideContainer {
+    padding: 20px;
+    display: flex;
+}
+
+
+.leftContainer{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonContainer{
+    padding: 20px;
+    display: flex;
+}
+button{
+    padding: 10px;
+    margin: 10px;
 }

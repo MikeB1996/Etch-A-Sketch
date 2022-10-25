@@ -9,20 +9,37 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="slidecontainer">
-        <input type="range" min="1" max="100" value="32" class="slider" id="myRange">
+    <div class="header">
+        Etch-A-Sketch
     </div>
 
+    <div class="cont">
+        <div class="leftContainer">
+            <div class="slideContainer">
+                <input type="range" min="1" max="100" value="32" class="slider" id="myRange">
+                <p class="slideP" id="myPSlide"></p>
+            </div>
+        
+        
+            <div class="buttonContainer">
+                <button id="resetB" class="resetButton">Reset</button>
+                <button id="resizeB" class="resizeButton">Resize</button>
+                <div class="colorButtons">
+                    <button id="colorBRed" class="colorButton">red</button>
+                    <button id="colorBBlue" class="colorButton">blue</button>
+                    <button id="colorBRainbow" class="colorButton">Rainbow</button>
+                </div>
+            </div>
+        </div>
+        
+    
+    
+        <div id="gridCont" class="gridContainer">
+    
+        </div>
 
-    <div>
-        <button id="resetB" class="resetButton">Reset</button>
-        <button id="resizeB" class="resizeButton">Resize</button>
     </div>
-
-
-    <div id="gridCont" class="gridCointainer">
-
-    </div>
+    
     <script src="script.js">
 
     </script>
